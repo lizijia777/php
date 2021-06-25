@@ -32,12 +32,9 @@
 
 **Create the database before running the command**
 
-1. $ cp .env.example .env # Modify the database configuration to your own database
-2. $ php artisan key:generate # Set the application key
-3. $ composer install -V # Install composer
-4. $ php artisan migrate # Running database migration
+1. You need to set up the NGINX MySQL PHP environment first.
+2. The root directory activity.sql database file is imported into the database
+3. The NGINX environment configuration root directory is specified under the project directory public
+4. The activity start and end times are modified in the database tables ac_activity_time start_time end_time
+5. .envThe database connection address and username password need to be configured in the file
 
-**Parameter description**
-
-1. CARNIVAL_DAYS: integer, value for how long will the Carnival take
-2. CURRENT_DAY: integer, value from 0 to CARNIVAL_DAYS, where 0  indicates a day before the first day of the Carnival
